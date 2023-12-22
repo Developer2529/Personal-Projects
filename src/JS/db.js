@@ -82,6 +82,17 @@ const dbTable = [
 
     },
 
+    {
+        id: '07', 
+        nombre: 'Wilfredo Polanco',
+        imagen: '/src/img/216571.jpg',
+        tarjeta: '216574',
+        proyecto: 'Servicio al Cliente',
+        extension: '6987',
+        ubicacion: 'nave 4',
+        acciones: '/src/img/menu_lines_hamburger_icon.png',
+
+    }
     
 
 
