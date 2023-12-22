@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/src/css/styelsheet.css" />
+    <title>Directorio Corporativo</title>
+  </head>
+
+  <body>
+    <header>
+      <div class="top-box"></div>
+      <div></div>
+      <div class="top-box"></div>
+    </header>
+
+    <h1>DIRECTORIO TELEFONICO</h1>
+    <div class="main-div-box">
+      <main class="main-section-container">
+        <!--Menu de Apps -->
+
+        <!-- <div class="apps-container">
+				<div>
+					
+					<h2 class="app-title">App</h2> 
+				</div>				
+				<div class="apps-name">
+					<img src="/src/img/phone_icon.png" alt="phone icon" class="icon">
+					<h3 class="directory-section">Directorio</h3>
+				</div>
+				<div class="apps-name">
+              		<img src="/src/img/passkey_icon.png" alt="phone icon" class="icon">
+              		<h3 class="password-generator-section">Generador de Contraseñas</h3>
+            	</div>
+			
+			</div> -->
+
+        <!-- Projects Section-->
+
+        <section class="project-section">
+          <div>
+            <h3 class="projects-name-hide projects-titles proyecto-titulo">PROYECTOS</h3>
+          </div>
+        </section>
+
+        <div>
+          <img
+            src="/src/img/arrow_next_right_icon.png"
+            alt="showBtn"
+            class="arrow-back-left"
+          />
+        </div>
+
+        <!-- Table section-->
+        <section class="table-box">
+          <div class="table-top-box">
+            <div><h2 class="table-title">Información del Usuario</h2></div>
+            <div class="option-btn-box">
+              <div>
+                <form>
+                  <label for="my-input"></label>
+                  <input type="search" id="my-input" placeholder="Buscar..." />
+                </form>
+              </div> 
+              
+              <div class="btn-div">
+                <img
+                  src="/src/img/_filter_icon.png"
+                  alt="filter-icon"
+                  class="option-btn"
+                />
+              </div>
+              <div class="btn-div">
+                <img
+                  src="/src/img/option_ui_icon.png"
+                  alt="option-icon"
+                  class="option-btn"
+                />
+              </div>
+            </div>
+          </div>
+          <div>
+            <table class="pro">
+              <thead>
+                <tr class="th-box">
+                  <th>Nombre</th>
+                  <th>Tarjeta</th>
+                  <th>Proyecto</th>
+                  <th>Extensión</th>
+                  <th>Ubicación</th>
+                  <th>Accioness</th>
+                </tr>
+              </thead>
+              <tbody id="directory-table">
+                <!-- <tr>
+              <td></td>      		
+							<td>Richar San</td>
+							<td>202020</td>
+							<td>Tecnologia</td>
+							<td>3939</td>
+							<td>nave 6.5</td>
+							<td></td>
+            </tr> -->
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+    <footer>
+      <div class="footer-credit">
+        <p>&copy; 2023 | Tecnología de Información</p>
+      </div>
+    </footer>
+    <script src="/src/JS/main.js"></script>
+    <script src="/src/JS/app.js"></script>
+    <script src="/src/JS/db.js"></script>
+    <script src="/src/JS/dbProjects.js"></script>
+  </body>
+</html>
