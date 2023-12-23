@@ -58,13 +58,15 @@ h1 {
   padding-left: 1rem;
 }
 
-.apps-name:hover,
+/* .apps-name:hover,
 .projects-div:hover {
   background-color: #cecece;
-}
+} */
 
 .projects-div:hover {
   background-color:#b7202f;
+  color: white;
+  font-size: 1.20rem;
 }
 
 .app-title,
@@ -85,9 +87,12 @@ h1 {
 .proyecto-titulo,
 .projects-titles {
   display: flex;
-  padding: 1rem;
+  /* padding: 1rem; */
 }
 
+.proyecto-titulo {
+  padding: 1.4rem;
+}
 .projects-div {
   display: flex;
   align-items: center;
@@ -106,6 +111,7 @@ h1 {
   margin: 0.6rem 0.6rem 0.6rem 0.6rem;
   background-color:rgb(39, 238, 13);
   border-radius: 2rem;
+  cursor: pointer;
 
   position: relative;
   animation-name: example;
@@ -121,6 +127,15 @@ h1 {
   height: 45px;
   text-align: center;
   padding: 1rem;
+
+ 
+}
+
+.animated-arrow-style {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding-left: 8rem;
 }
 
 @keyframes example {
@@ -194,10 +209,12 @@ table {
   
 }
 
-th {
+th,
+.proyecto-titulo {
   color: #ffffff;
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
+  
 }
 
 footer {
@@ -293,7 +310,7 @@ tr td {
 }
 
 .proyecto-titulo  {
-  font-size: 1.4rem;
+  /* font-size: 1.4rem; */
   color: #4f4f4f;
   text-transform: uppercase;
   font-weight: bold;

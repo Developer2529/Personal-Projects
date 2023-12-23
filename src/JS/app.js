@@ -153,20 +153,12 @@ clearHTML()
 dbTable.forEach(area => {
   if (e.target.textContent.includes(area.proyecto)) {
     makeTable(area)
-  } else if (e.target.textContent.includes("Todos") || e.target.textContent.includes("PROYECTOS")) {
+  } else if (e.target.textContent.includes("Todos") || e.target.textContent.includes("PROYECTOS") || e.target.textContent == "") {
     cargarTabla(dbTable)
   }
 })
 
 }
-
-// const projectsNameImg = document.querySelector(".project-section").target
-// console.log(projectsNameImg);
-// projectsNameImg.addEventListener("click", imageSelected);
-
-// function imageSelected(params) {
-  
-// }
 
 
 //*funcion para limpiar HTML
@@ -180,6 +172,7 @@ function clearHTML() {
 ///ocultar los nombres de los proyectos /////////////
 
 function hideProjectTitle() {
+  cargarTabla(dbTable)
       
  // Get all elements with the specified class name 
 const projectList = document.querySelectorAll('.projects-titles');
@@ -191,8 +184,20 @@ const elementsArray = Array.from(projectList);
 elementsArray.forEach(function(element) {
       element.classList.toggle("projects-name-hide")
 
+      const tituloProyecto = document.querySelector(".proyecto-titulo")
+      tituloProyecto.style.color ="white"
+      tituloProyecto.style.backgroundColor ="#b7202f"
+      tituloProyecto.classList.add("animated-arrow-style" );
+
+      const animatedArrowStyle = document.querySelector(".animated-arrow")
+      animatedArrowStyle.classList.add("animated-arrow-style")
+      
+
       if (projectsTitles.classList.contains("projects-name-hide")) {
         hideBtn.src = "/src/img/arrow_next_right_icon.png";
+        animatedArrowStyle.classList.remove("animated-arrow-style")
+        
+      
       } else {
   
         hideBtn.src = "/src/img/arrow_back_left_icon.png";
