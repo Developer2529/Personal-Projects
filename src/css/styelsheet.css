@@ -43,7 +43,6 @@ h1 {
   border-right: #4f4f4f;
   border-right-style: solid;
   border-right-width: 0.1rem;
-  
 }
 
 .apps-name {
@@ -51,7 +50,6 @@ h1 {
   align-items: center;
   padding: 1rem;
   border-radius: 4rem;
-  
 }
 
 .apps-name h3 {
@@ -64,9 +62,8 @@ h1 {
 } */
 
 .projects-div:hover {
-  background-color:#b7202f;
+  background-color: #b7202f;
   color: white;
-  font-size: 1.20rem;
 }
 
 .app-title,
@@ -80,8 +77,8 @@ h1 {
 /* ///////Projects section//////////// */
 
 .project-section {
-  background-color:#f0e7e8;
-  overflow-y:auto;
+  background-color: #f0e7e8;
+  overflow-y: auto;
 }
 
 .proyecto-titulo,
@@ -99,17 +96,13 @@ h1 {
 
   padding: 1rem;
   border-radius: 3rem;
-  
 }
-
-
 
 .arrow-back-left,
 .arrow-back-right {
   width: 15px;
   height: 15px;
-  margin: 0.6rem 0.6rem 0.6rem 0.6rem;
-  background-color:rgb(39, 238, 13);
+  background-color: rgb(39, 238, 13);
   border-radius: 2rem;
   cursor: pointer;
 
@@ -117,31 +110,39 @@ h1 {
   animation-name: example;
   animation-duration: 4s;
   animation-iteration-count: infinite;
-
-
-  
 }
+
 
 .animated-arrow {
   width: 45px;
   height: 45px;
   text-align: center;
   padding: 1rem;
-
- 
 }
 
 .animated-arrow-style {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding-left: 8rem;
+  padding-left: 11rem;
 }
 
 @keyframes example {
-  0%   {background-color:rgb(0, 17, 255); width:20px; height:20px;}
-  25%  {background-color:#ff0019; width:30px; height:30px;}
-  100% {background-color:rgb(0, 255, 0); width:20px; height:20px;}
+  0% {
+    background-color: rgb(0, 17, 255);
+    width: 20px;
+    height: 20px;
+  }
+  25% {
+    background-color: #ff0019;
+    width: 30px;
+    height: 30px;
+  }
+  100% {
+    background-color: rgb(0, 255, 0);
+    width: 20px;
+    height: 20px;
+  }
 }
 .arrow-back-right {
   display: none;
@@ -185,15 +186,11 @@ h1 {
 
 .th-box {
   background-color: #b7202f;
-  
-
-
 }
 
 th,
 td {
   padding: 1.4rem;
-  
 }
 
 tr:nth-child(even) {
@@ -206,7 +203,6 @@ table thead tbody tr {
 
 table {
   border-collapse: collapse;
-  
 }
 
 th,
@@ -214,7 +210,6 @@ th,
   color: #ffffff;
   text-transform: uppercase;
   font-family: Arial, Helvetica, sans-serif;
-  
 }
 
 footer {
@@ -261,6 +256,32 @@ table {
   border-radius: 0.5rem;
 }
 
+#my-input-one {
+  /* border-radius: 20rem; */
+  width: auto;
+  color: white;
+  border-style: none;
+  font-size: inherit;
+}
+#my-input-one::placeholder {
+  color: white;
+  text-align: center;
+}
+
+.input-div {
+  display: flex;
+  background-color: #b7202f;
+  width: fit-content;
+  align-items: center;
+}
+
+.magnifying-icon {
+  width: 30px;
+  height: 30px;
+
+  fill: #ffffff;
+}
+
 @font-face {
   font-family: Lato;
   src: url("/src/fonts/Lato/Lato-Regular.ttf") format("opentype");
@@ -288,32 +309,28 @@ tr td {
   }
 }
 
-.table-box{
-  overflow-y:auto;
+.table-box {
+  overflow-y: auto;
 }
 
 .projects-div:first-child {
   display: flex;
   justify-content: center;
-  
 }
-
 
 /* .todo-icon {
   width: 40px;
   height: 40px;
 } */
 
-.projects-name-hide {
-
+.projects-name-hide{
   display: none;
 }
 
-.proyecto-titulo  {
+.proyecto-titulo {
   /* font-size: 1.4rem; */
   color: #4f4f4f;
   text-transform: uppercase;
   font-weight: bold;
   padding-left: 6rem;
-  
 }
