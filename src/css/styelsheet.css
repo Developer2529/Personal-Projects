@@ -19,7 +19,7 @@ html {
 h1 {
   padding: 3rem;
   font-weight: 700rem;
-  padding-left: 33.4rem;
+  /* padding-left: 33.4rem; */
   padding-bottom: 1.6rem;
   text-align: center;
 }
@@ -28,6 +28,7 @@ h1 {
   display: flex;
   justify-content: center;
   margin-bottom: 4rem;
+ 
 }
 
 .main-section-container {
@@ -37,6 +38,7 @@ h1 {
   width: auto;
   height: 480px;
   border-radius: 1rem;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .apps-container {
@@ -62,8 +64,8 @@ h1 {
 } */
 
 .projects-div:hover {
-  background-color: #b7202f;
-  color: white;
+  background-color: #f6f6f6;
+  color: rgb(0, 0, 0);
 }
 
 .app-title,
@@ -77,7 +79,9 @@ h1 {
 /* ///////Projects section//////////// */
 
 .project-section {
-  background-color: #f0e7e8;
+  /* background-color:rgb(241 234 234); */
+   background-color:#b7202f;
+  border-radius: 1rem;
   overflow-y: auto;
 }
 
@@ -124,7 +128,7 @@ h1 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  padding-left: 11rem;
+  padding-left: 8rem;
 }
 
 @keyframes example {
@@ -134,7 +138,7 @@ h1 {
     height: 20px;
   }
   25% {
-    background-color: #ff0019;
+    background-color: #f6f6f6;
     width: 30px;
     height: 30px;
   }
@@ -228,6 +232,7 @@ footer .footer-credit p {
   width: 20px;
   height: 20px;
   margin: 0.6rem 0.6rem 0.6rem 0.6rem;
+  cursor: pointer;
 }
 
 .option-btn {
@@ -263,17 +268,17 @@ table {
   border-style: none;
   font-size: inherit;
 }
-#my-input-one::placeholder {
+/* #my-input-one::placeholder {
   color: white;
   text-align: center;
-}
+} */
 
-.input-div {
+/* .input-div {
   display: flex;
   background-color: #b7202f;
   width: fit-content;
   align-items: center;
-}
+} */
 
 .magnifying-icon {
   width: 30px;
@@ -334,3 +339,4 @@ tr td {
   font-weight: bold;
   padding-left: 6rem;
 }
+

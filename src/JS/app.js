@@ -1,7 +1,7 @@
 //  variables
 const directoryTable = document.querySelector("#directory-table");
 const dataSearcherBox = document.querySelector("#my-input");
-const projectSeacherInput = document.querySelector("#my-input-one");
+
 const contactHTML = document.createElement("tr");
 const projectsName = document.querySelector(".project-section");
 let projectsTitles = document.querySelector(".projects-titles");
@@ -19,34 +19,11 @@ document.addEventListener("DOMContentLoaded", () => {
   loadProjectData(dbProjects);
 });
 
-projectSeacherInput.addEventListener("input", searchProject);
 projectsName.addEventListener("click", projectSelected);
+
 hideBtn.addEventListener("click", showProjectsName);
 
-////////////Funciones////////////////
-function searchProject(e) {
-  clearHTML2()
-  dbProjects.filter((element) => {
-    if (
-      element.nombreProyecto
-        .toUpperCase()
-        .includes(e.target.value.toUpperCase())
-    ) {
-      
-      makeProjectsList(element);
-    } else if (e.target.value.length === 0) {
-      return loadProjectData(dbProjects);
-    }
-  });
-}
-
-function clearHTML2() {
-  while (projectsName && projectsName.children.length >= 3) {
-    projectsName.removeChild(projectsName.children[2]);
-  }
-}
-
-////////////funcion para crear tabla ////////////////
+//*Funciones
 const makeTable = ({
   nombre,
   imagen,
@@ -56,7 +33,7 @@ const makeTable = ({
   ubicacion,
   acciones,
 }) => {
-  
+  ////////////variables ////////////////
   const tbodyMainTR = document.createElement("TR");
   //column name
   const tdForNombre = document.createElement("TD");
@@ -169,6 +146,7 @@ function loadProjectData(dbProjects) {
 ///segundo filtro de datos selecionando los proyectos
 function projectSelected(e) {
   clearHTML();
+  e.stopPropagation();
   dbTable.forEach((area) => {
     if (e.target.textContent.includes(area.proyecto)) {
       makeTable(area);
@@ -182,14 +160,14 @@ function projectSelected(e) {
   });
 }
 
-/////funcion para limpiar HTML de la tabla////////
+//*funcion para limpiar HTML de la tabla
 function clearHTML() {
   while (directoryTable.firstChild) {
     directoryTable.removeChild(directoryTable.firstChild);
   }
 }
 
-/////////Ocultar los nombres de los proyectos /////////////
+///ocultar los nombres de los proyectos /////////////
 function showProjectsName() {
   cargarTabla(dbTable);
 
@@ -204,11 +182,9 @@ function showProjectsName() {
     element.classList.toggle("projects-name-hide");
 
     const tituloProyecto = document.querySelector(".proyecto-titulo");
-    const mignifierIcon = document.querySelector(".magnifier-icon");
     tituloProyecto.style.color = "white";
     tituloProyecto.style.backgroundColor = "#b7202f";
     tituloProyecto.classList.add("animated-arrow-style");
-    mignifierIcon.classList.add("magnifying-icon");
 
     const animatedArrowStyle = document.querySelector(".animated-arrow");
     animatedArrowStyle.classList.add("animated-arrow-style");
@@ -216,44 +192,22 @@ function showProjectsName() {
     if (projectsTitles.classList.contains("projects-name-hide")) {
       hideBtn.src = "/src/img/arrow_next_right_icon.png";
       animatedArrowStyle.classList.remove("animated-arrow-style");
-      mignifierIcon.classList.remove("magnifying-icon");
     } else {
       hideBtn.src = "/src/img/arrow_back_left_icon.png";
     }
   });
 }
 
-// document.addEventListener('DOMContentLoaded', function() {
-//   // Select all div elements with a last child h3 element
-//   var divsWithLastH3 = document.querySelectorAll('div > h3:last-child');
+const imgSelected = document.querySelector(".project-section")
 
-//   // Iterate through the selected elements and print text content
-//   divsWithLastH3.forEach(function(h3Element, index) {
-//       console.log(h3Element.textContent);
-//   });
-// });
+imgSelected.addEventListener("click", imgSelectedFunction)
+  // Select all div elements with a last child h3 element
 
-// const imgSelected = document.querySelector(".project-section-2")
-
-// imgSelected.addEventListener("click", imgSelectedFunction)
-//   // Select all div elements with a last child h3 element
-
-//   function imgSelectedFunction (e) {
-//   var divsWithLastH3 = document.querySelectorAll('div > img');
-
-//   // Iterate through the selected elements and print text content
-//   divsWithLastH3.forEach(function(h3Element) {
-
-//      if(e.target.textContent.includes(h3Element.textContent)) {
-//       console.log(e.target.textContent);
-//      }else {"not found"}
-
-//     cargarTabla(dbTable)
-//     dbTable.filter(busca => {
-
-//     //  console.log(e.target.textContent.includes(busca.proyecto));
-
-//     })
-
-//   });
-// }
+  function imgSelectedFunction (e) {
+    console.log(e.target.nextSibling.textContent);
+    console.log(e.target);
+    
+    
+  // var divsWithLastH3 = document.querySelectorAll('div > h3');
+ 
+  }
