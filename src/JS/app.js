@@ -198,6 +198,38 @@ function showProjectsName() {
   });
 }
 
+/////changing the withd, font size and more 
+const MainSection = document.querySelector(".main-section-container")
+
+hideBtn.addEventListener("click", changeMainWidth)
+
+function changeMainWidth() {
+  MainSection.style.width = "1040px"
+  document.querySelector("table").style.width = "780px"
+  document.querySelector("thead").style.fontSize = "1.2rem"
+  document.querySelector("tbody").style.fontSize = "1.3rem"
+  
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 const imgSelected = document.querySelector(".project-section")
 
 imgSelected.addEventListener("click", imgSelectedFunction)

@@ -19,9 +19,19 @@ html {
 h1 {
   padding: 3rem;
   font-weight: 700rem;
-  /* padding-left: 33.4rem; */
   padding-bottom: 1.6rem;
+  padding-left: 0.5rem;
   text-align: center;
+}
+.h1-div {
+  display: flex;
+  align-items:center;
+ justify-content: center;
+  
+}
+.phonebook-icon {
+  width: 40px;
+  /* height: 40px; */
 }
 
 .main-div-box {
@@ -41,27 +51,9 @@ h1 {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-.apps-container {
-  border-right: #4f4f4f;
-  border-right-style: solid;
-  border-right-width: 0.1rem;
+h3{
+  font-size: 1.4rem;
 }
-
-.apps-name {
-  display: flex;
-  align-items: center;
-  padding: 1rem;
-  border-radius: 4rem;
-}
-
-.apps-name h3 {
-  padding-left: 1rem;
-}
-
-/* .apps-name:hover,
-.projects-div:hover {
-  background-color: #cecece;
-} */
 
 .projects-div:hover {
   background-color: #f6f6f6;
@@ -79,7 +71,7 @@ h1 {
 /* ///////Projects section//////////// */
 
 .project-section {
-  /* background-color:rgb(241 234 234); */
+  
    background-color:#b7202f;
   border-radius: 1rem;
   overflow-y: auto;
@@ -87,8 +79,8 @@ h1 {
 
 .proyecto-titulo,
 .projects-titles {
-  display: flex;
-  /* padding: 1rem; */
+   display: flex;
+
 }
 
 .proyecto-titulo {
@@ -213,7 +205,7 @@ th,
 .proyecto-titulo {
   color: #ffffff;
   text-transform: uppercase;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Lato", sans-serif;
 }
 
 footer {
@@ -249,11 +241,6 @@ table {
   text-align: center;
 }
 
-#position {
-  color: gray;
-  padding-top: 0.4rem;
-}
-
 #my-input {
   height: 3rem;
   text-align: center;
@@ -261,29 +248,11 @@ table {
   border-radius: 0.5rem;
 }
 
-#my-input-one {
-  /* border-radius: 20rem; */
-  width: auto;
-  color: white;
-  border-style: none;
-  font-size: inherit;
-}
-/* #my-input-one::placeholder {
-  color: white;
-  text-align: center;
-} */
 
-/* .input-div {
-  display: flex;
-  background-color: #b7202f;
-  width: fit-content;
-  align-items: center;
-} */
 
 .magnifying-icon {
   width: 30px;
   height: 30px;
-
   fill: #ffffff;
 }
 
@@ -301,11 +270,11 @@ table {
 
 tr td {
   font-family: "Lato", sans-serif;
-  font-size: 1rem;
+  
 }
 
-/* td:nth-child(3) {
-  width: 50rem;
+/* td:nth-child(1) {
+  width: 20rem;
 } */
 
 @media only screen and (max-width: 900px) {
@@ -333,8 +302,7 @@ tr td {
 }
 
 .proyecto-titulo {
-  /* font-size: 1.4rem; */
-  color: #4f4f4f;
+  font-size: 1.3rem; 
   text-transform: uppercase;
   font-weight: bold;
   padding-left: 6rem;
