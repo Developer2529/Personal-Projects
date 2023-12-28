@@ -13,46 +13,49 @@ html {
 .top-box {
   background-color: #b7202f;
   width: 100%;
-  height: 1rem;
+  height: 6rem;
 }
 
 h1 {
-  padding: 3rem;
-  font-weight: 700rem;
-  padding-bottom: 1.6rem;
-  padding-left: 0.5rem;
-  text-align: center;
+  font-weight: 100;
+  color: #ffffff;
+  padding-left: 1rem;
 }
 .h1-div {
   display: flex;
-  align-items:center;
- justify-content: center;
-  
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
 }
 .phonebook-icon {
-  width: 40px;
-  /* height: 40px; */
+  width: 35px;
+  height: 35px;
 }
 
 .main-div-box {
   display: flex;
   justify-content: center;
   margin-bottom: 4rem;
- 
 }
 
 .main-section-container {
   display: flex;
   background-color: #ededed;
   border-radius: 0.2rem;
-  width: auto;
-  height: 480px;
+  width: 700px;
+  height: 370px;
   border-radius: 1rem;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
-h3{
-  font-size: 1.4rem;
+table {
+    width:600px;
+  }
+
+
+h3 {
+  font-size: 15px;
+  font-weight: 100;
 }
 
 .projects-div:hover {
@@ -60,27 +63,26 @@ h3{
   color: rgb(0, 0, 0);
 }
 
-.app-title,
 .table-title {
   font-size: 1.4rem;
   color: #4f4f4f;
   text-transform: uppercase;
-  font-weight: bold;
+  font-weight: 100;
+  text-align: center;
 }
 
 /* ///////Projects section//////////// */
 
-.project-section {
-  
-   background-color:#b7202f;
+.section-1 {
+  background-color: #b7202f;
   border-radius: 1rem;
   overflow-y: auto;
 }
 
+
 .proyecto-titulo,
 .projects-titles {
-   display: flex;
-
+  display: flex;
 }
 
 .proyecto-titulo {
@@ -91,7 +93,7 @@ h3{
   align-items: center;
 
   padding: 1rem;
-  border-radius: 3rem;
+  border-radius: 2rem;
 }
 
 .arrow-back-left,
@@ -107,7 +109,6 @@ h3{
   animation-duration: 4s;
   animation-iteration-count: infinite;
 }
-
 
 .animated-arrow {
   width: 45px;
@@ -158,7 +159,6 @@ h3{
   justify-content: space-between;
 }
 
-.app-title,
 .table-title {
   text-align: left;
   padding: 1rem 1rem 2rem 1rem;
@@ -206,6 +206,8 @@ th,
   color: #ffffff;
   text-transform: uppercase;
   font-family: "Lato", sans-serif;
+  /* font-size: 10px; */
+
 }
 
 footer {
@@ -248,8 +250,6 @@ table {
   border-radius: 0.5rem;
 }
 
-
-
 .magnifying-icon {
   width: 30px;
   height: 30px;
@@ -265,20 +265,11 @@ table {
 @font-face {
   font-family: Lato;
   src: url("/src/fonts/Lato/Lato-Light.ttf") format("opentype");
-  font-weight: 300;
+  font-weight: 600;
 }
-
-tr td {
-  font-family: "Lato", sans-serif;
-  
-}
-
-/* td:nth-child(1) {
-  width: 20rem;
-} */
 
 @media only screen and (max-width: 900px) {
-  .apps-name {
+  .projects-titles {
     display: none;
   }
 }
@@ -287,24 +278,23 @@ tr td {
   overflow-y: auto;
 }
 
-.projects-div:first-child {
-  display: flex;
-  justify-content: center;
-}
-
-/* .todo-icon {
-  width: 40px;
-  height: 40px;
-} */
-
-.projects-name-hide{
+.projects-name-hide {
   display: none;
 }
 
 .proyecto-titulo {
-  font-size: 1.3rem; 
+  font-size: 14px;
   text-transform: uppercase;
   font-weight: bold;
   padding-left: 6rem;
 }
 
+.btn-class {
+  padding: 1.5rem 4rem; 
+  background-color: aqua;
+  
+}
+
+tbody {
+  font-size: 11px;
+}

@@ -4,27 +4,30 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/src/css/styelsheet.css" />
-    <link rel="shortcut icon" href="/src/img/favicon_book_contacts_library_phone_icon.svg" type="image/x-icon">
+    <link
+      rel="shortcut icon"
+      href="/src/img/favicon_book_contacts_library_phone_icon.svg"
+      type="image/x-icon"
+    />
     <title>Directorio Corporativo</title>
   </head>
 
   <body>
     <header>
-      <div class="top-box"></div>
-      <div></div>
-      <div class="top-box"></div>
+      <div class="top-box h1-div">
+        <img
+          src="/src/img/white_phone book_directory_phone_book_icon.svg"
+          alt="Phone Book"
+          class="phonebook-icon"
+        />
+        <h1>DIRECTORIO TELEFONICO</h1>
+      </div>
     </header>
-    <div class="h1-div">
-       <img src="/src/img/red_phone book_directory_phone_book_icon.svg" alt="Phone Book" 
-      class="phonebook-icon">
-    <h1>DIRECTORIO TELEFONICO</h1>
-  </div>
+
     <div class="main-div-box">
       <main class="main-section-container">
-       
         <!-- Projects Section-->
-        <section class="project-section project-section-2">
-
+        <section class="section-1">
           <div class="animated-arrow">
             <img
               src="/src/img/arrow_next_right_icon.png"
@@ -32,13 +35,20 @@
               class="arrow-back-left"
             />
           </div>
-          <div>
-            <p class="projects-name-hide projects-titles proyecto-titulo">PROYECTOS</p> 
-            
-          </div>       
+          <p class="projects-name-hide projects-titles proyecto-titulo">
+            PROYECTOS
+          </p>
+          <div class="main-project-div">
+            <div class="projects-div">
+              <img
+                src="/src/img/desktop-light.svg"
+                alt="Redes Sociales"
+                class="icon"
+              />
+              <h3 class="projects-titles projects-name-hide">Redes Sociales</h3>
+            </div>
+          </div>
         </section>
-
-     
 
         <!-- Table section-->
         <section class="table-box">
@@ -50,8 +60,8 @@
                   <label for="my-input"></label>
                   <input type="search" id="my-input" placeholder="Buscar..." />
                 </form>
-              </div> 
-              
+              </div>
+
               <div class="btn-div">
                 <img
                   src="/src/img/_filter_icon.png"
@@ -81,7 +91,9 @@
                 </tr>
               </thead>
               <tbody id="directory-table">
-                <tr><td>Data Not Found</td></tr>
+                <tr>
+                  <td>Data Not Found</td>
+                </tr>
               </tbody>
             </table>
           </div>

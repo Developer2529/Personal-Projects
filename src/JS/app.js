@@ -3,7 +3,7 @@ const directoryTable = document.querySelector("#directory-table");
 const dataSearcherBox = document.querySelector("#my-input");
 
 const contactHTML = document.createElement("tr");
-const projectsName = document.querySelector(".project-section");
+const projectsName = document.querySelector(".main-project-div");
 let projectsTitles = document.querySelector(".projects-titles");
 let hideBtn = document.querySelector(".arrow-back-left");
 const categoryList = document.querySelectorAll(".projects-titles");
@@ -115,7 +115,7 @@ function dataSearcher(event, table) {
 
 /////////TERCERA FUNCION, AQUI CARGA LA LISTA DE PROYECTOS //////////////
 const makeProjectsList = ({ nombreProyecto, iconImage }) => {
-  const projectsList = document.querySelector(".project-section");
+  const projectsList = document.querySelector(".main-project-div");
   const divElement = document.createElement("DIV");
   const imageElement = document.createElement("IMG");
   const headingElement = document.createElement("H3");
@@ -144,20 +144,47 @@ function loadProjectData(dbProjects) {
 }
 
 ///segundo filtro de datos selecionando los proyectos
-function projectSelected(e) {
+// function projectSelected(e) {
+//   clearHTML();
+//   dbTable.forEach((area) => {
+//     if (e.target.textContent.includes(area.proyecto)) {
+//       makeTable(area);
+//     } else if (
+//       e.target.textContent.includes("Todos") ||
+//       e.target.textContent.includes("PROYECTOS") ||
+//       e.target.textContent == ""
+//     ) {
+//       cargarTabla(dbTable);
+//     }
+//   });
+// }
+
+function projectSelected(e) {  
+  let h3TextCaptured = e.target.innerHTML 
   clearHTML();
-  e.stopPropagation();
-  dbTable.forEach((area) => {
-    if (e.target.textContent.includes(area.proyecto)) {
-      makeTable(area);
-    } else if (
-      e.target.textContent.includes("Todos") ||
-      e.target.textContent.includes("PROYECTOS") ||
-      e.target.textContent == ""
-    ) {
-      cargarTabla(dbTable);
+  dbTable.forEach(area => {
+    let tagname = e.target.tagName
+    if (tagname === "IMG") {
+      const imgTextCaptured = e.target.nextElementSibling.textContent;
+      if (imgTextCaptured.includes(area.proyecto)) {
+         return makeTable(area);
+         } else if (imgTextCaptured.includes("Todos")) {
+          return cargarTabla(dbTable)
+        } 
+              
+    } else if (h3TextCaptured.includes(area.proyecto)) {
+      return makeTable(area);
     }
-  });
+    
+    else if (
+      h3TextCaptured.includes("Todos") ||
+      h3TextCaptured.includes("PROYECTOS") ||
+      h3TextCaptured.textContent == ""
+    ) {
+      return cargarTabla(dbTable)
+    }
+  })
+  
 }
 
 //*funcion para limpiar HTML de la tabla
@@ -170,7 +197,7 @@ function clearHTML() {
 ///ocultar los nombres de los proyectos /////////////
 function showProjectsName() {
   cargarTabla(dbTable);
-
+  
   // Get all elements with the specified class name
   const projectList = document.querySelectorAll(".projects-titles");
 
@@ -187,59 +214,124 @@ function showProjectsName() {
     tituloProyecto.classList.add("animated-arrow-style");
 
     const animatedArrowStyle = document.querySelector(".animated-arrow");
+    const MainSection = document.querySelector(".main-section-container")
     animatedArrowStyle.classList.add("animated-arrow-style");
 
-    if (projectsTitles.classList.contains("projects-name-hide")) {
+    if (!projectsTitles.classList.contains("projects-name-hide")) {
+        hideBtn.src = "/src/img/arrow_back_left_icon.png";
+          MainSection.style.width = "1050px"
+          document.querySelector("table").style.width = "780px"
+          document.querySelector(".th-box").style.fontSize = "12px"
+          document.querySelector("tbody").style.fontSize = "14px"
+            
+          
+          
+    } else if (projectsTitles.classList.contains("projects-name-hide")){
       hideBtn.src = "/src/img/arrow_next_right_icon.png";
       animatedArrowStyle.classList.remove("animated-arrow-style");
-    } else {
-      hideBtn.src = "/src/img/arrow_back_left_icon.png";
+      MainSection.style.width = "620px"
+      document.querySelector("table").style.width = "528px"
+      document.querySelector("tbody").style.color = "";
+      document.querySelector("tbody").style.fontSize = "11px"
+      document.querySelector(".th-box").style.fontSize = "10px"
+
+    
     }
   });
 }
 
-/////changing the withd, font size and more 
-const MainSection = document.querySelector(".main-section-container")
+// console.log(divsWithLastH3[2].alt == "Redes Sociales");
+// console.log(divsWithLastH3[2].nextElementSibling.textContent)
+// const divsWithLastH3 = document.querySelectorAll('div > h3:last-child');
+// console.log(divsWithLastH3[2].nextElementSibling.textContent)
 
-hideBtn.addEventListener("click", changeMainWidth)
 
-function changeMainWidth() {
-  MainSection.style.width = "1040px"
-  document.querySelector("table").style.width = "780px"
-  document.querySelector("thead").style.fontSize = "1.2rem"
-  document.querySelector("tbody").style.fontSize = "1.3rem"
+// const divsWithLastH3 = document.getElementsByTagName('img');
+// document.addEventListener("click", imgSelectedFunction)
+
+// function imgSelectedFunction (e) {
+//   console.log(e.target.nextElementSibling.textContent);
+// }
+
+// projectsName.addEventListener("click", textSelectedFunction)
+// function textSelectedFunction (e) {
+//   // console.log(e.target.textContent.includes("Redes"));
+//   console.log(e.target.innerHTML.includes("Redes Sociales"));
+// }
+
+
+// const imageSelect = document.querySelector('img');
+// imageSelect.addEventListener("click",projectSelected)
   
-}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-const imgSelected = document.querySelector(".project-section")
-
-imgSelected.addEventListener("click", imgSelectedFunction)
-  // Select all div elements with a last child h3 element
-
-  function imgSelectedFunction (e) {
-    console.log(e.target.nextSibling.textContent);
-    console.log(e.target);
-    
-    
-  // var divsWithLastH3 = document.querySelectorAll('div > h3');
+// function projectSelected(e) {
+  
  
-  }
+//   clearHTML();
+
+//   dbTable.forEach(area => {
+//     // console.log(e.target.tagName);
+//     let imgTextCaptured = e.target.nextElementSibling.textContent; 
+//     let h3TextCaptured = e.target.innerHTML; 
+//     if (imgTextCaptured.includes(area.proyecto)) {
+//       return makeTable(area);
+//     } else if (      
+//       h3TextCaptured.includes(area.proyecto)) {
+//       return makeTable(area);
+//     } else if ( 
+//       imgTextCaptured.includes("Todos") ||
+//       imgTextCaptured.includes("PROYECTOS") ||
+//         imgTextCaptured.textContent == ""
+//     ) {
+//       cargarTabla(dbTable);
+//     }
+//   });
+// }
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// const imgSelected = document.getElementsByClassName("icon")
+
+// imgSelected.addEventListener("click", imgSelectedFunction)
+
+// function imgSelectedFunction (e) {
+
+// console.log(imgSelected);
+
+
+//     for (let i = 0; i < imgSelected.length; i++) {
+//       const element = imgSelected[i].nextElementSibling
+//       console.log(element.textContent);
+//     }
+//   }
+
+
+//   // Select all div elements with a last child h3 element
+
+//   function imgSelectedFunction (e) {
+   
+//     const acceso2 = document.querySelectorAll("div h3")
+//     const objetivo = e.target.textContent
+//     console.log(objetivo);
+//     console.log(objetivo);
+    
+//     // for (let i = 0; i < acceso2.length; i++) {
+//     //   const element = acceso2[i].textContent;
+//     //   console.log(element);
+//     // }
+
+//   }
+
