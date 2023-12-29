@@ -24,7 +24,7 @@ const dbProjects = [
 
   {
     id: 4,
-    nombreProyecto: "Telemercadeo",
+    nombreProyecto: "TMK",
     iconImage: "/src/img/phone-call-light.svg",
   },
 
@@ -54,7 +54,7 @@ const dbProjects = [
 
   {
     id: 9,
-    nombreProyecto: "Tmk Negocios",
+    nombreProyecto: "TMK Negocios",
     iconImage: "/src/img/marketing_icon.svg",
   },
 
